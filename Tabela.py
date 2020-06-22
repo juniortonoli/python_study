@@ -37,7 +37,6 @@ print('Encerrado.')
 
 # matriz variavel
 matriz = []
-qcoluna = []
 linha = int(input(f'Digite quantas linhas: '))
 coluna = int(input(f'Digite quantas colunas: '))
 qcoluna = [0] * coluna
