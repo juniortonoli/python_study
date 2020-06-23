@@ -51,3 +51,21 @@ for l in range(0, linha):
     for c in range(0, coluna):
         print(f'[{matriz[l][c]:^5}]', end='')
     print()
+
+#matriz variavel alternate
+matriz = []
+qlinha = int(input(f'Digite quantas linhas: '))
+qcoluna = int(input(f'Digite quantas colunas: '))
+linhamatrix = []
+# escolhendo numero
+for l in range(0, qlinha):
+    linhamatrix = []
+    for c in range(0, qcoluna):
+        numero = int(input(f'Digite um valor para [{l}, {c}] '))
+        linhamatrix.append(numero)
+    matriz.append(linhamatrix)
+# impressão de matriz
+for l in range(0, qlinha):
+    for c in range(0, qcoluna):
+        print(f'[{matriz[l][c]:^5}]', end='')
+    print()
