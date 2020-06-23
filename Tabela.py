@@ -53,19 +53,37 @@ for l in range(0, linha):
     print()
 
 #matriz variavel alternate
+# matriz variavel
+import random
+soma = 0
+media = 0
 matriz = []
-qlinha = int(input(f'Digite quantas linhas: '))
-qcoluna = int(input(f'Digite quantas colunas: '))
-linhamatrix = []
-# escolhendo numero
-for l in range(0, qlinha):
-    linhamatrix = []
-    for c in range(0, qcoluna):
-        numero = int(input(f'Digite um valor para [{l}, {c}] '))
-        linhamatrix.append(numero)
-    matriz.append(linhamatrix)
+linha = []
+linhaescolhida = int(input(f'Digite a linha escolhida: '))
+qcoluna = [0] * 12
+operacao = str(input(f'Somar ou Media: ')).lower()
+# prenchendo matriz
+for c in range(0, 12):
+    matriz.append(qcoluna[:])
+# escolhendo o numero (caso invalido)
+for l in range(0, 12):
+    for c in range(0, 12):
+        matriz[l][c] = random.randint(1, 12)
 # impressão de matriz
-for l in range(0, qlinha):
-    for c in range(0, qcoluna):
+for l in range(0, 12):
+    for c in range(0, 12):
         print(f'[{matriz[l][c]:^5}]', end='')
     print()
+# definindo e operando valores escolhidos
+print('Valores Escolhidos:')
+for l in range(12):
+    for c in range(12):
+        if l == linhaescolhida:
+            print(f'[{matriz[l][c]:^5}]', end='')
+            soma = soma + matriz[l][c]
+# condição de operação
+print()
+if operacao == 'somar':
+    print(soma)
+if operacao == 'media':
+    print(soma / 12)
