@@ -30,5 +30,7 @@ with open('abc.txt', 'w+') as file:
 import os
 os.remove('abc.txt')
 
-
+with open('dog_breeds.txt', 'r') as reader:
+    for line in reader.readlines():
+        print(line, end='')
 
