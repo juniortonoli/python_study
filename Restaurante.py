@@ -1,6 +1,8 @@
+#Append, soma de itens do cardapio.
+
 data = [{'codigo': 0, 'nome': 'Cachorro Quente', 'preco': 4},
         {'codigo': 1, 'nome': 'X Salada', 'preco': 3},
-        {'codigo': 3, 'nome': 'X Bacon', 'preco': 5}]
+        {'codigo': 2, 'nome': 'X Bacon', 'preco': 5}]
 pedido = []
 #0 quantidade 1 nome 2 precototal
 item = []
